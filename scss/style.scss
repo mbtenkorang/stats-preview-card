@@ -38,6 +38,7 @@ main {
     border-radius: 0.5em;
     overflow: hidden;
     max-width: 23rem;
+    // height: 80vh;
 }
 
 article {
@@ -123,23 +124,36 @@ article {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 970px) {
 
     main {
-        width: 75%;
+        // width: 75%;
+        max-width: 88%;
     }
 
     article {
-        flex-direction: row-reverse;
-        height: 23rem;
+        // flex-direction: row-reverse;
+        display: grid;
+        grid-template-areas:
+            "info" "image";
+        // grid-template-rows: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+
+        min-height: 23rem;
 
         div.img-wrapper {
             display: block;
-            width: 101%;
+            width: 100%;
+            height: 100%;
+            grid-area: image;
+            grid-column: 2/3;
+            grid-row: 1/3;
         }
 
         div.main-text {
             max-width: 73%;
+            grid-area: info;
+            grid-row: 1/3;
         }
     }
 
