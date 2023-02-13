@@ -18,20 +18,26 @@ $paragraph-text-font: 'Lexend Deca', sans-serif;
     padding: 0;
 }
 
+html {
+    height: 100vh;
+}
+
 
 body {
     background-color: $main-bgcolor;
     display: grid;
     font-size: 16px;
-    height: 100vh;
-    margin: 0 auto;
+
+    margin: auto;
     place-items: center;
-    width: 90%;
+    width: 80%;
+    height: 100%;
 }
 
 main {
     border-radius: 0.5em;
     overflow: hidden;
+    max-width: 23rem;
 }
 
 article {
@@ -42,7 +48,7 @@ article {
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
-    // max-width: 23rem;
+
 
     div.img-wrapper {
         position: relative;
@@ -117,7 +123,7 @@ article {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
 
     main {
         width: 75%;

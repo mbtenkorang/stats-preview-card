@@ -8,19 +8,24 @@
   padding: 0;
 }
 
+html {
+  height: 100vh;
+}
+
 body {
   background-color: hsl(233deg, 47%, 7%);
   display: grid;
   font-size: 16px;
-  height: 100vh;
-  margin: 0 auto;
+  margin: auto;
   place-items: center;
-  width: 90%;
+  width: 80%;
+  height: 100%;
 }
 
 main {
   border-radius: 0.5em;
   overflow: hidden;
+  max-width: 23rem;
 }
 
 article {
@@ -108,7 +113,7 @@ article div.stats .stats--text {
   font-size: 14px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   main {
     width: 75%;
   }
